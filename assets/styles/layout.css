@@ -1,0 +1,17 @@
+/* Responsive layout utilities based on the Figma Breakpoint foundation. */
+
+.site-container {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: var(--layout-content-max);
+  margin-inline: auto;
+  padding-inline: var(--layout-inline-margin);
+}
+
+/*
+ * Mobile:  0–767px       — flexible, 24px inline margin
+ * Tablet:  768–1199px    — flexible, 40px inline margin
+ * Desktop: 1200–1600px   — flexible, 80px inline margin
+ * Wide:    1601px+       — fixed 1440px content, centered
+ */
+
