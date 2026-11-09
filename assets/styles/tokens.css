@@ -1,0 +1,347 @@
+/* Generated from Figma: Token---Component
+ * Font theme: set data-font-theme="sans" or "serif" on <html>.
+ * Responsive typography is mobile-first; Desktop begins at 768px.
+ */
+
+:root {
+  /* Breakpoint and layout foundations */
+  --breakpoint-tablet: 768px;
+  --breakpoint-desktop: 1200px;
+  --breakpoint-wide: 1601px;
+  --layout-inline-margin: 24px;
+  --layout-content-max: 100%;
+
+  /* Color primitives */
+  --color-neutral-white: #FFFFFF;
+  --color-neutral-50: #FAF9F7;
+  --color-neutral-100: #F3F1EC;
+  --color-neutral-200: #E7E4DE;
+  --color-neutral-300: #D6D2CC;
+  --color-neutral-400: #BBB6AE;
+  --color-neutral-500: #A39E95;
+  --color-neutral-600: #716C65;
+  --color-neutral-700: #5C574F;
+  --color-neutral-800: #3B3833;
+  --color-neutral-900: #262421;
+  --color-neutral-black: #000000;
+  --color-red-50: #FFF5F5;
+  --color-red-100: #FDECEC;
+  --color-red-200: #F8D2D2;
+  --color-red-300: #F2B5B5;
+  --color-red-400: #E88E8E;
+  --color-red-500: #D96C6C;
+  --color-red-600: #BC4E4E;
+  --color-red-700: #933A3A;
+  --color-red-800: #6A2A2A;
+  --color-red-900: #4B1D1D;
+  --color-orange-50: #FFF8F1;
+  --color-orange-100: #FEEED8;
+  --color-orange-200: #FDD8B4;
+  --color-orange-300: #FBC48D;
+  --color-orange-400: #F4A96A;
+  --color-orange-500: #E88C4B;
+  --color-orange-600: #C56F33;
+  --color-orange-700: #9A5427;
+  --color-orange-800: #6F3C1B;
+  --color-orange-900: #4C2A13;
+  --color-yellow-50: #FFFAEE;
+  --color-yellow-100: #FEF2D7;
+  --color-yellow-200: #FDE3AF;
+  --color-yellow-300: #FBD784;
+  --color-yellow-400: #F6CD65;
+  --color-yellow-500: #F1C75B;
+  --color-yellow-600: #D3A844;
+  --color-yellow-700: #A88534;
+  --color-yellow-800: #7C6325;
+  --color-yellow-900: #54461A;
+  --color-green-50: #F5FDEB;
+  --color-green-100: #E9FBCF;
+  --color-green-200: #D2F7A3;
+  --color-green-300: #B9F171;
+  --color-green-400: #9BE63D;
+  --color-green-500: #78DF11;
+  --color-green-600: #5EB30C;
+  --color-green-700: #46850A;
+  --color-green-800: #315E07;
+  --color-green-900: #204204;
+  --color-mint-50: #F3FBF7;
+  --color-mint-100: #E1F4EA;
+  --color-mint-200: #C3E8D4;
+  --color-mint-300: #A2DCC1;
+  --color-mint-400: #7FCCAA;
+  --color-mint-500: #5FAE8F;
+  --color-mint-600: #4A8D72;
+  --color-mint-700: #3B705D;
+  --color-mint-800: #2C5446;
+  --color-mint-900: #1F3C32;
+  --color-blue-50: #F3F8FF;
+  --color-blue-100: #E1EEFF;
+  --color-blue-200: #C1DCFF;
+  --color-blue-300: #9AC5FF;
+  --color-blue-400: #75AEFF;
+  --color-blue-500: #4F8FFF;
+  --color-blue-600: #3A72CC;
+  --color-blue-700: #2B57A3;
+  --color-blue-800: #1E3D73;
+  --color-blue-900: #132A51;
+  --color-indigo-50: #F5F6FF;
+  --color-purple-50: #FBF7FE;
+  --color-purple-100: #F3E9FD;
+  --color-purple-200: #E7D1FB;
+  --color-purple-300: #D7B4F7;
+  --color-purple-400: #C092F1;
+  --color-purple-500: #A26CDE;
+  --color-purple-600: #8652BB;
+  --color-purple-700: #6A3E94;
+  --color-purple-800: #4C2C6A;
+  --color-purple-900: #361E49;
+  --color-indigo-100: #E6E8FE;
+  --color-indigo-200: #C9CCFC;
+  --color-indigo-300: #A8ACF8;
+  --color-indigo-400: #8A8EF2;
+  --color-indigo-500: #6F72E8;
+  --color-indigo-600: #5758C4;
+  --color-indigo-700: #44439B;
+  --color-indigo-800: #333172;
+  --color-indigo-900: #24224F;
+  --color-magenta-50: #FFF5FA;
+  --color-magenta-100: #FBE7F2;
+  --color-magenta-200: #F6CBE3;
+  --color-magenta-300: #EFA9CE;
+  --color-magenta-400: #E280B5;
+  --color-magenta-500: #CE5A98;
+  --color-magenta-600: #B0427E;
+  --color-magenta-700: #8C3464;
+  --color-magenta-800: #66254A;
+  --color-magenta-900: #471A34;
+
+  /* Semantic colors — Light */
+  --color-foreground-base-primary: var(--color-neutral-900);
+  --color-foreground-base-secondary: var(--color-neutral-700);
+  --color-foreground-base-tertiary: var(--color-neutral-500);
+  --color-foreground-base-inverse: var(--color-neutral-white);
+  --color-foreground-base-on-accent: var(--color-neutral-white);
+  --color-foreground-interactive-default: var(--color-mint-700);
+  --color-foreground-interactive-hover: var(--color-mint-500);
+  --color-foreground-interactive-focus: var(--color-mint-500);
+  --color-foreground-interactive-press: var(--color-mint-500);
+  --color-foreground-system-success: var(--color-green-700);
+  --color-foreground-system-warning: var(--color-orange-600);
+  --color-foreground-system-negative: var(--color-red-600);
+  --color-foreground-system-disabled: var(--color-neutral-400);
+  --color-foreground-accent-primary-primary: var(--color-mint-700);
+  --color-foreground-accent-primary-secondary: var(--color-mint-800);
+  --color-foreground-accent-primary-tertiary: var(--color-mint-900);
+  --color-foreground-accent-secondary-primary: var(--color-yellow-700);
+  --color-foreground-accent-secondary-secondary: var(--color-yellow-800);
+  --color-background-base-primary: var(--color-neutral-50);
+  --color-background-base-secondary: var(--color-neutral-white);
+  --color-background-base-tertiary: var(--color-neutral-100);
+  --color-background-base-quaternary: var(--color-neutral-300);
+  --color-background-interactive-default: var(--color-mint-500);
+  --color-background-interactive-hover: var(--color-mint-600);
+  --color-background-interactive-focus: var(--color-mint-600);
+  --color-background-interactive-press: var(--color-mint-700);
+  --color-background-system-success: var(--color-green-100);
+  --color-background-overlay-default: rgba(38, 36, 33, 0.4);
+  --color-background-system-warning: var(--color-orange-100);
+  --color-background-system-negative: var(--color-red-100);
+  --color-background-system-disabled: var(--color-neutral-200);
+  --color-border-base-primary: var(--color-neutral-100);
+  --color-border-base-devider: var(--color-neutral-200);
+  --color-border-interactive-default: var(--color-mint-500);
+  --color-border-system-success: var(--color-green-500);
+  --color-border-system-warning: var(--color-orange-500);
+  --color-border-system-negative: var(--color-red-500);
+  --color-border-system-disabled: var(--color-neutral-300);
+  --color-border-interactive-hover: var(--color-mint-600);
+  --color-border-interactive-focus: var(--color-mint-700);
+  --color-border-interactive-press: var(--color-mint-700);
+  --color-border-accent-primary-primary: var(--color-mint-500);
+  --color-border-accent-secondary-primary: var(--color-yellow-500);
+  --color-border-accent-secondary-secondary: var(--color-yellow-600);
+  --color-border-accent-primary-secondary: var(--color-mint-700);
+
+  /* Radius — Mobile */
+  --radius-container: 16px;
+  --radius-card: 6px;
+  --radius-full: 999px;
+
+  /* Typography scale — Mobile */
+  --type-display-font-size: 48px;
+  --type-display-line-height: 58px;
+  --type-heading-l-font-size: 32px;
+  --type-heading-l-line-height: 45px;
+  --type-heading-m-font-size: 24px;
+  --type-heading-m-line-height: 34px;
+  --type-heading-s-font-size: 22px;
+  --type-heading-s-line-height: 33px;
+  --type-body-l-font-size: 20px;
+  --type-body-l-line-height: 32px;
+  --type-body-m-font-size: 18px;
+  --type-body-m-line-height: 32px;
+  --type-body-s-font-size: 16px;
+  --type-body-s-line-height: 29px;
+  --type-label-l-font-size: 20px;
+  --type-label-l-line-height: 26px;
+  --type-label-s-font-size: 14px;
+  --type-label-s-line-height: 20px;
+  --type-caption-font-size: 12px;
+  --type-caption-line-height: 18px;
+}
+
+:root, [data-font-theme="sans"] {
+  /* Typography font theme — Sans */
+  --font-family-zh: "Noto Sans TC", sans-serif;
+  --font-family-en: "Roboto", sans-serif;
+  --type-display-font-weight-zh: 700;
+  --type-display-font-weight-en: 600;
+  --type-display-letter-spacing-zh: 4%;
+  --type-display-letter-spacing-en: 0%;
+  --type-heading-l-font-weight-zh: 500;
+  --type-heading-l-font-weight-en: 500;
+  --type-heading-l-letter-spacing-zh: 3%;
+  --type-heading-l-letter-spacing-en: 0%;
+  --type-heading-m-font-weight-zh: 500;
+  --type-heading-m-font-weight-en: 500;
+  --type-heading-m-letter-spacing-zh: 3%;
+  --type-heading-m-letter-spacing-en: 0%;
+  --type-heading-s-font-weight-zh: 700;
+  --type-heading-s-font-weight-en: 600;
+  --type-heading-s-letter-spacing-zh: 2%;
+  --type-heading-s-letter-spacing-en: 0%;
+  --type-body-l-font-weight-zh: 500;
+  --type-body-l-font-weight-en: 500;
+  --type-body-l-letter-spacing-zh: 2%;
+  --type-body-l-letter-spacing-en: 0%;
+  --type-body-m-font-weight-zh: 500;
+  --type-body-m-font-weight-en: 500;
+  --type-body-m-letter-spacing-zh: 2%;
+  --type-body-m-letter-spacing-en: 0%;
+  --type-body-s-font-weight-zh: 500;
+  --type-body-s-font-weight-en: 500;
+  --type-body-s-letter-spacing-zh: 2%;
+  --type-body-s-letter-spacing-en: 0%;
+  --type-label-l-font-weight-zh: 500;
+  --type-label-l-font-weight-en: 500;
+  --type-label-l-letter-spacing-zh: 4%;
+  --type-label-l-letter-spacing-en: 2%;
+  --type-label-s-font-weight-zh: 500;
+  --type-label-s-font-weight-en: 500;
+  --type-label-s-letter-spacing-zh: 3%;
+  --type-label-s-letter-spacing-en: 2%;
+  --type-caption-font-weight-zh: 700;
+  --type-caption-font-weight-en: 600;
+  --type-caption-letter-spacing-zh: 3%;
+  --type-caption-letter-spacing-en: 1%;
+
+  /* Shadow — Mobile */
+  --shadow-low-mobile: 0 2px 8px rgba(33, 31, 28, 0.12);
+  --shadow-high-mobile: 0 8px 24px rgba(33, 31, 28, 0.16);
+
+  /* Shadow — Desktop */
+  --shadow-low-desktop: 0 4px 12px rgba(33, 31, 28, 0.12);
+  --shadow-high-desktop: 0 12px 32px rgba(33, 31, 28, 0.16);
+
+  /* Responsive semantic aliases */
+  --shadow-low: var(--shadow-low-mobile);
+  --shadow-high: var(--shadow-high-mobile);
+}
+
+[data-font-theme="serif"] {
+  /* Typography font theme — Serif */
+  --font-family-zh: "Noto Serif TC", serif;
+  --font-family-en: "EB Garamond", serif;
+  --type-display-font-weight-zh: 700;
+  --type-display-font-weight-en: 600;
+  --type-display-letter-spacing-zh: 6%;
+  --type-display-letter-spacing-en: 1%;
+  --type-heading-l-font-weight-zh: 500;
+  --type-heading-l-font-weight-en: 500;
+  --type-heading-l-letter-spacing-zh: 5%;
+  --type-heading-l-letter-spacing-en: 1%;
+  --type-heading-m-font-weight-zh: 500;
+  --type-heading-m-font-weight-en: 500;
+  --type-heading-m-letter-spacing-zh: 4%;
+  --type-heading-m-letter-spacing-en: 1%;
+  --type-heading-s-font-weight-zh: 700;
+  --type-heading-s-font-weight-en: 600;
+  --type-heading-s-letter-spacing-zh: 4%;
+  --type-heading-s-letter-spacing-en: 1%;
+  --type-body-l-font-weight-zh: 500;
+  --type-body-l-font-weight-en: 500;
+  --type-body-l-letter-spacing-zh: 3%;
+  --type-body-l-letter-spacing-en: 0%;
+  --type-body-m-font-weight-zh: 500;
+  --type-body-m-font-weight-en: 500;
+  --type-body-m-letter-spacing-zh: 3%;
+  --type-body-m-letter-spacing-en: 0%;
+  --type-body-s-font-weight-zh: 500;
+  --type-body-s-font-weight-en: 500;
+  --type-body-s-letter-spacing-zh: 3%;
+  --type-body-s-letter-spacing-en: 0%;
+  --type-label-l-font-weight-zh: 500;
+  --type-label-l-font-weight-en: 500;
+  --type-label-l-letter-spacing-zh: 5%;
+  --type-label-l-letter-spacing-en: 2%;
+  --type-label-s-font-weight-zh: 500;
+  --type-label-s-font-weight-en: 500;
+  --type-label-s-letter-spacing-zh: 4%;
+  --type-label-s-letter-spacing-en: 2%;
+  --type-caption-font-weight-zh: 700;
+  --type-caption-font-weight-en: 600;
+  --type-caption-letter-spacing-zh: 3%;
+  --type-caption-letter-spacing-en: 1%;
+}
+
+@media (min-width: 768px) {
+  :root {
+    --layout-inline-margin: 40px;
+
+    /* Radius — Desktop */
+    --radius-container: 24px;
+    --radius-card: 8px;
+    --radius-full: 999px;
+
+    /* Shadow — Desktop */
+    --shadow-low: var(--shadow-low-desktop);
+    --shadow-high: var(--shadow-high-desktop);
+
+    /* Typography scale — Desktop */
+    --type-display-font-size: 64px;
+    --type-display-line-height: 77px;
+    --type-heading-l-font-size: 36px;
+    --type-heading-l-line-height: 50px;
+    --type-heading-m-font-size: 32px;
+    --type-heading-m-line-height: 45px;
+    --type-heading-s-font-size: 24px;
+    --type-heading-s-line-height: 36px;
+    --type-body-l-font-size: 24px;
+    --type-body-l-line-height: 38px;
+    --type-body-m-font-size: 20px;
+    --type-body-m-line-height: 36px;
+    --type-body-s-font-size: 16px;
+    --type-body-s-line-height: 29px;
+    --type-label-l-font-size: 24px;
+    --type-label-l-line-height: 31px;
+    --type-label-s-font-size: 16px;
+    --type-label-s-line-height: 22px;
+    --type-caption-font-size: 12px;
+    --type-caption-line-height: 18px;
+  }
+}
+
+@media (min-width: 1200px) {
+  :root {
+    --layout-inline-margin: 80px;
+  }
+}
+
+@media (min-width: 1601px) {
+  :root {
+    --layout-inline-margin: 0px;
+    --layout-content-max: 1440px;
+  }
+}
+
+
