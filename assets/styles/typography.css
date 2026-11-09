@@ -1,0 +1,153 @@
+/* Typography utilities generated from the Figma Text Styles. */
+
+.type-display {
+  font-size: var(--type-display-font-size);
+  line-height: var(--type-display-line-height);
+}
+.type-display.type-tc, .type-display:lang(zh) {
+  font-family: var(--font-family-zh);
+  font-weight: var(--type-display-font-weight-zh);
+  letter-spacing: var(--type-display-letter-spacing-zh);
+}
+.type-display.type-en, .type-display:lang(en) {
+  font-family: var(--font-family-en);
+  font-weight: var(--type-display-font-weight-en);
+  letter-spacing: var(--type-display-letter-spacing-en);
+}
+
+.type-heading-l {
+  font-size: var(--type-heading-l-font-size);
+  line-height: var(--type-heading-l-line-height);
+}
+.type-heading-l.type-tc, .type-heading-l:lang(zh) {
+  font-family: var(--font-family-zh);
+  font-weight: var(--type-heading-l-font-weight-zh);
+  letter-spacing: var(--type-heading-l-letter-spacing-zh);
+}
+.type-heading-l.type-en, .type-heading-l:lang(en) {
+  font-family: var(--font-family-en);
+  font-weight: var(--type-heading-l-font-weight-en);
+  letter-spacing: var(--type-heading-l-letter-spacing-en);
+}
+
+.type-heading-m {
+  font-size: var(--type-heading-m-font-size);
+  line-height: var(--type-heading-m-line-height);
+}
+.type-heading-m.type-tc, .type-heading-m:lang(zh) {
+  font-family: var(--font-family-zh);
+  font-weight: var(--type-heading-m-font-weight-zh);
+  letter-spacing: var(--type-heading-m-letter-spacing-zh);
+}
+.type-heading-m.type-en, .type-heading-m:lang(en) {
+  font-family: var(--font-family-en);
+  font-weight: var(--type-heading-m-font-weight-en);
+  letter-spacing: var(--type-heading-m-letter-spacing-en);
+}
+
+.type-heading-s {
+  font-size: var(--type-heading-s-font-size);
+  line-height: var(--type-heading-s-line-height);
+}
+.type-heading-s.type-tc, .type-heading-s:lang(zh) {
+  font-family: var(--font-family-zh);
+  font-weight: var(--type-heading-s-font-weight-zh);
+  letter-spacing: var(--type-heading-s-letter-spacing-zh);
+}
+.type-heading-s.type-en, .type-heading-s:lang(en) {
+  font-family: var(--font-family-en);
+  font-weight: var(--type-heading-s-font-weight-en);
+  letter-spacing: var(--type-heading-s-letter-spacing-en);
+}
+
+.type-body-l {
+  font-size: var(--type-body-l-font-size);
+  line-height: var(--type-body-l-line-height);
+}
+.type-body-l.type-tc, .type-body-l:lang(zh) {
+  font-family: var(--font-family-zh);
+  font-weight: var(--type-body-l-font-weight-zh);
+  letter-spacing: var(--type-body-l-letter-spacing-zh);
+}
+.type-body-l.type-en, .type-body-l:lang(en) {
+  font-family: var(--font-family-en);
+  font-weight: var(--type-body-l-font-weight-en);
+  letter-spacing: var(--type-body-l-letter-spacing-en);
+}
+
+.type-body-m {
+  font-size: var(--type-body-m-font-size);
+  line-height: var(--type-body-m-line-height);
+}
+.type-body-m.type-tc, .type-body-m:lang(zh) {
+  font-family: var(--font-family-zh);
+  font-weight: var(--type-body-m-font-weight-zh);
+  letter-spacing: var(--type-body-m-letter-spacing-zh);
+}
+.type-body-m.type-en, .type-body-m:lang(en) {
+  font-family: var(--font-family-en);
+  font-weight: var(--type-body-m-font-weight-en);
+  letter-spacing: var(--type-body-m-letter-spacing-en);
+}
+
+.type-body-s {
+  font-size: var(--type-body-s-font-size);
+  line-height: var(--type-body-s-line-height);
+}
+.type-body-s.type-tc, .type-body-s:lang(zh) {
+  font-family: var(--font-family-zh);
+  font-weight: var(--type-body-s-font-weight-zh);
+  letter-spacing: var(--type-body-s-letter-spacing-zh);
+}
+.type-body-s.type-en, .type-body-s:lang(en) {
+  font-family: var(--font-family-en);
+  font-weight: var(--type-body-s-font-weight-en);
+  letter-spacing: var(--type-body-s-letter-spacing-en);
+}
+
+.type-label-l {
+  font-size: var(--type-label-l-font-size);
+  line-height: var(--type-label-l-line-height);
+}
+.type-label-l.type-tc, .type-label-l:lang(zh) {
+  font-family: var(--font-family-zh);
+  font-weight: var(--type-label-l-font-weight-zh);
+  letter-spacing: var(--type-label-l-letter-spacing-zh);
+}
+.type-label-l.type-en, .type-label-l:lang(en) {
+  font-family: var(--font-family-en);
+  font-weight: var(--type-label-l-font-weight-en);
+  letter-spacing: var(--type-label-l-letter-spacing-en);
+}
+
+.type-label-s {
+  font-size: var(--type-label-s-font-size);
+  line-height: var(--type-label-s-line-height);
+}
+.type-label-s.type-tc, .type-label-s:lang(zh) {
+  font-family: var(--font-family-zh);
+  font-weight: var(--type-label-s-font-weight-zh);
+  letter-spacing: var(--type-label-s-letter-spacing-zh);
+}
+.type-label-s.type-en, .type-label-s:lang(en) {
+  font-family: var(--font-family-en);
+  font-weight: var(--type-label-s-font-weight-en);
+  letter-spacing: var(--type-label-s-letter-spacing-en);
+}
+
+.type-caption {
+  font-size: var(--type-caption-font-size);
+  line-height: var(--type-caption-line-height);
+}
+.type-caption.type-tc, .type-caption:lang(zh) {
+  font-family: var(--font-family-zh);
+  font-weight: var(--type-caption-font-weight-zh);
+  letter-spacing: var(--type-caption-letter-spacing-zh);
+}
+.type-caption.type-en, .type-caption:lang(en) {
+  font-family: var(--font-family-en);
+  font-weight: var(--type-caption-font-weight-en);
+  letter-spacing: var(--type-caption-letter-spacing-en);
+}
+
+
