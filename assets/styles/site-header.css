@@ -81,10 +81,10 @@ site-header {
   border-radius: var(--radius-full);
   color: var(--color-foreground-base-secondary);
   font-family: var(--font-family-en);
-  font-size: var(--type-body-l-font-size);
-  font-weight: var(--type-body-l-font-weight-en);
-  line-height: var(--type-body-l-line-height);
-  letter-spacing: var(--type-body-l-letter-spacing-en);
+  font-size: var(--type-body-m-font-size);
+  font-weight: var(--type-body-m-font-weight-en);
+  line-height: var(--type-body-m-line-height);
+  letter-spacing: var(--type-body-m-letter-spacing-en);
   text-decoration: none;
   background: transparent;
 }
@@ -137,10 +137,10 @@ site-header {
   border-radius: 8px;
   color: var(--color-foreground-base-secondary);
   font-family: var(--font-family-en);
-  font-size: var(--type-body-l-font-size);
-  font-weight: var(--type-body-l-font-weight-en);
-  line-height: var(--type-body-l-line-height);
-  letter-spacing: var(--type-body-l-letter-spacing-en);
+  font-size: var(--type-body-m-font-size);
+  font-weight: var(--type-body-m-font-weight-en);
+  line-height: var(--type-body-m-line-height);
+  letter-spacing: var(--type-body-m-letter-spacing-en);
   text-decoration: none;
   background: transparent;
 }
