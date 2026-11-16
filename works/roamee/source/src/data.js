@@ -1,0 +1,41 @@
+import { NOW_THEMES, SURPRISE_TAGS, NOW_THEME_OPTIONS, SURPRISE_TAG_OPTIONS } from "./place-taxonomy.js?v=20260822v";
+import { createPlace, toPrototypePlace, validatePlaces } from "./place-schema.js?v=20260822v";
+import { PLACE_BATCH_01 } from "./place-batch-01.js?v=20260822s";
+import { PLACE_FIGMA_OVERRIDES, PLACE_FIGMA_ADDITIONS } from "./place-figma-content.js?v=20260822v";
+
+export const themes = NOW_THEMES;
+export const surpriseTags = SURPRISE_TAGS;
+export const themeRegistry = NOW_THEME_OPTIONS;
+export const surpriseTagRegistry = SURPRISE_TAG_OPTIONS;
+
+const corePlaceSeeds = [
+  { id:"garden91", name:"Garden 91 草山玉溪", theme:"情感療癒", category:"藝文空間", area:"士林區", price:2, distance:7.2, duration:120, indoor:true, image:"assets/figma/garden-91-1.jpeg", images:["assets/figma/garden-91-1.jpeg","assets/figma/garden-91-2.jpeg"], tags:["什麼都不用做只要休息的","社恐必去","網紅打卡點"], description:"藏在陽明山腳的藝術園區，庭園、雕塑與老宅交織出安靜而有層次的午後。", introParagraphs:["草山玉溪 Garden 91 位於台北市士林區仰德大道二段91號，是一座融合藝術、人文與自然景觀的私人庭園石雕美術館。由企業家林文雄先生創立，園區內展示了他多年來收藏的中國石雕藝術品，包括佛教文物、生活器皿和裝飾性展品。","園區建築以純白色為主調，外觀採用不規則的鏤空設計，陽光透過這些圖案投射出變幻的光影，營造出獨特的視覺效果。館內設有咖啡廳，提供茶、咖啡等飲品，讓訪客在欣賞藝術之餘，也能享受片刻的寧靜時光。","草山玉溪 Garden 91 採取預約制，開放時間為週二至週日的10:00至18:00，週一休園。入園門票為150元，可折抵館內消費50元。由於園區位於陽明山上，建議訪客搭乘大眾運輸工具前往，或在附近停車後步行至園區。"], imageCredit:"莊媛媛", address:"台北市士林區仰德大道二段91號", openingHours:"週二至週日 10:00–18:00", admission:"150 元，可折抵館內消費 50 元", reservationRequired:true, comments:[{author:"Yu Ting",rating:5,date:"2025.04.18",text:"光影和庭園都很舒服，平日下午來訪很安靜。"},{author:"Bo Hsuan",rating:4,date:"2025.03.02",text:"建議先預約，也要替上山交通多留一點時間。"}] },
+  { id:"beitou-library", name:"北投圖書館", theme:"情感療癒", category:"閱讀空間", area:"北投區", address:"台北市北投區光明路251號", price:0, distance:10.4, duration:90, indoor:true, image:"assets/places/place-02.jpeg", tags:["一個人也行","不想曬太陽","月底沒錢了"], description:"木構建築被綠意包圍，適合慢慢閱讀，也適合在城市裡短暫安靜下來。" },
+  { id:"botanical-garden", name:"臺北植物園", theme:"自然環境", category:"公園", area:"中正區", address:"台北市中正區南海路53號", price:0, distance:2.8, duration:90, indoor:false, image:"assets/places/place-03.jpeg", tags:["想吹吹風","一個人也行","月底沒錢了"], description:"從荷花池到歷史建築，以一段不費力的散步重新感受城市四季。" },
+  { id:"xia-hai", name:"大稻埕霞海城隍廟", theme:"求神拜佛", category:"寺廟", area:"大同區", address:"台北市大同區迪化街一段61號", latitude:25.05562, longitude:121.51014, price:0, distance:3.9, duration:45, indoor:false, image:"assets/places/place-04.jpeg", tags:["適合約會","月底沒錢了","網紅打卡點"], description:"迪化街上的百年信仰中心，也是一趟大稻埕散步最有故事感的起點。" },
+  { id:"boardgame", name:"桌遊領主", theme:"遊戲娛樂", category:"桌遊", area:"大安區", price:2, distance:3.1, duration:180, indoor:true, image:"assets/places/place-05.jpeg", tags:["不想曬太陽","排隊也可以","家庭旅遊"], description:"規則有人教、遊戲選擇充足，臨時揪到朋友也能快速開一局。" },
+  { id:"xing-tian", name:"行天宮", theme:"求神拜佛", category:"寺廟", area:"中山區", address:"台北市中山區民權東路二段109號", price:0, distance:4.6, duration:40, indoor:false, image:"assets/places/place-06.jpeg", tags:["一個人也行","月底沒錢了"], description:"交通方便且秩序沉靜，適合在忙碌途中停下腳步，整理一下心情。" },
+  { id:"pastaio", name:"PASTAIO", theme:"美食饕餮", category:"義式料理", area:"大安區", price:3, averageCost:500, distance:0.65, duration:100, indoor:true, image:"assets/figma/nearby-pastaio.png", tags:["適合約會","排隊也可以","網紅打卡點"], description:"供應自製義大利麵餐點的時髦餐廳，天花板採挑高設計且裝潢十分現代化。", reservationRequired:true },
+  { id:"bremen", name:"不萊梅 Bremen", theme:"美食饕餮", category:"義式料理", area:"大安區", price:1, averageCost:200, distance:0.25, duration:100, indoor:true, image:"assets/figma/nearby-bremen.png", tags:["一個人也行","不想曬太陽","適合約會"], description:"東區難得的平價義大利麵餐廳。", reservationRequired:false },
+  { id:"kingyo", name:"金魚日本料理", theme:"美食饕餮", category:"日式料理", area:"大安區", price:3, averageCost:650, distance:0.95, duration:100, indoor:true, image:"assets/figma/nearby-kingyo.png", tags:["適合約會","排隊也可以"], description:"溫馨素雅的日式餐廳，以厚切生魚片、生魚片丼飯和涮涮鍋聞名。", reservationRequired:true },
+  { id:"44-village", name:"四四南村", theme:"文化藝術", category:"歷史聚落", area:"信義區", address:"台北市信義區松勤街50號", price:0, distance:5.3, duration:80, indoor:false, image:"assets/places/place-01.jpeg", tags:["想吹吹風","網紅打卡點","月底沒錢了"], description:"眷村建築與台北城市天際線並置，是容易抵達、也適合隨興拍照的文化景點。" },
+  { id:"ice-land", name:"小巨蛋冰上樂園", theme:"遊戲娛樂", category:"運動", area:"松山區", price:2, distance:4.1, duration:120, indoor:true, image:"assets/places/place-03.jpeg", images:["assets/places/place-03.jpeg","assets/figma/plan-theme-11.jpg"], address:"台北市松山區南京東路四段2號", tags:["不想曬太陽","爆汗","家庭旅遊"], description:"冰上樂園打造北國冰雪場景，讓溜冰樂趣走入亞熱帶城市。無論季節，都能與親友一同健身放鬆、聯絡感情，享受冰宮中的清涼時光。" },
+  { id:"diy-baking", name:"自己做烘焙聚樂部", theme:"個人成長", category:"手作體驗", area:"松山區", price:3, distance:4.5, duration:150, indoor:true, image:"assets/places/place-04.jpeg", tags:["不想曬太陽","適合約會","家庭旅遊"], description:"從備料到完成甜點都自己動手，零經驗也能在引導下帶走一份作品。" },
+  { id:"longshan", name:"艋舺龍山寺", theme:"求神拜佛", category:"寺廟", area:"萬華區", address:"台北市萬華區廣州街211號", price:0, distance:3.5, duration:60, indoor:false, image:"assets/places/place-06.jpeg", tags:["一個人也行","月底沒錢了","網紅打卡點"], description:"從建築、信仰到周邊街區都值得停留，是認識艋舺歷史最直接的一站。" },
+  { id:"music-center", name:"臺北流行音樂中心", theme:"音樂素養", category:"音樂場館", area:"南港區", price:2, distance:8.6, duration:120, indoor:true, image:"assets/places/place-07.jpeg", tags:["不想曬太陽","適合約會","網紅打卡點"], description:"從常設展到現場演出，用一個下午沿著臺灣流行音樂的記憶旅行。" },
+  { id:"science-center", name:"臺灣科學教育館", theme:"科學探索", category:"科學館", area:"士林區", address:"台北市士林區士商路189號", price:1, distance:7.8, duration:180, indoor:true, image:"assets/places/place-02.jpeg", tags:["不想曬太陽","家庭旅遊","月底沒錢了"], description:"大量互動展件讓抽象知識變得可以觸摸，是雨天也能自在探索的室內目的地。" },
+  { id:"puzzle-room", name:"智慧獵人密室逃脫", theme:"動腦推理", category:"密室逃脫", area:"中山區", price:3, distance:3.7, duration:120, indoor:true, image:"assets/places/place-05.jpeg", tags:["不想曬太陽","家庭旅遊","排隊也可以"], description:"以故事和機關串起合作解謎，適合想把聚會變得更有記憶點的小隊伍。" },
+  { id:"old-town", name:"剝皮寮歷史街區", theme:"城市探索", category:"歷史街區", area:"萬華區", address:"台北市萬華區康定路173巷", openingHours:"街區週二至週日 09:00–21:00；室內展間 09:00–18:00；週一休館", price:0, distance:3.3, duration:70, indoor:false, image:"assets/places/place-04.jpeg", tags:["一個人也行","網紅打卡點","月底沒錢了"], description:"紅磚街屋保存了艋舺的城市紋理，很適合與周邊市場一起安排成散步路線。" },
+  { id:"dadaocheng-wharf", name:"大稻埕碼頭", theme:"河岸漫遊", category:"河濱空間", area:"大同區", price:0, distance:4.2, duration:90, indoor:false, image:"assets/places/place-03.jpeg", tags:["想吹吹風","適合約會","月底沒錢了"], description:"傍晚沿河散步、看夕陽和城市燈光，是不需要事先規劃也能成立的小旅行。" }
+  ,{ id:"ikea-xinzhuang", name:"IKEA瑞典餐廳 台北城市店", theme:"美食饕餮", category:"餐廳", area:"新莊區", price:2, distance:6.8, duration:90, indoor:true, image:"assets/places/place-02.jpeg", address:"新北市新莊區新北大道四段3號", tags:["不想曬太陽","家庭旅遊"], description:"適合安排在行程中段的寬敞餐飲空間，並可順道逛逛居家用品。" },
+  { id:"fuji-pork", name:"富士豬排", theme:"美食饕餮", category:"日式料理", area:"松山區", price:2, distance:4.9, duration:80, indoor:true, image:"assets/places/place-04.jpeg", address:"台北市松山區健康路50號1樓", tags:["不想曬太陽","家庭旅遊"], description:"以酥脆炸豬排與定食為主，適合作為行程中的午餐停靠點。" },
+  { id:"qin-lady", name:"秦小姐豆漿店", theme:"美食饕餮", category:"早餐", area:"松山區", price:1, distance:4.4, duration:50, indoor:true, image:"assets/places/place-05.jpeg", address:"台北市松山區延吉街7之6號", tags:["在地探索","月底沒錢了"], description:"傳統中式早餐與現做豆漿，適合用一頓簡單的早餐開始城市散步。" },
+  { id:"moca", name:"台北當代藝術館 MOCA", theme:"文化藝術", category:"美術館", area:"大同區", price:1, distance:2.5, duration:120, indoor:true, image:"assets/places/place-07.jpeg", address:"台北市大同區長安西路39號", tags:["不想曬太陽","文青探店"], description:"紅磚歷史建築中的當代藝術展覽空間，展覽內容經常更換。" },
+  { id:"taipei-underground", name:"台北地下街", theme:"城市探索", category:"商場", area:"中正區", price:1, distance:1.7, duration:100, indoor:true, image:"assets/places/place-01.jpeg", address:"台北市中正區市民大道一段100號", tags:["不想曬太陽","逛街"], description:"串聯台北車站周邊的地下商場，適合雨天購物與用餐。" },
+  { id:"astronomy-museum", name:"台北市立天文科學教育館", theme:"科學探索", category:"博物館", area:"士林區", price:1, distance:8.1, duration:150, indoor:true, image:"assets/places/place-02.jpeg", address:"台北市士林區基河路363號", tags:["不想曬太陽","家庭旅遊"], description:"以天文展示、劇場與互動設施帶領旅客認識宇宙。" }
+];
+const placeSeeds = [...corePlaceSeeds,...PLACE_BATCH_01].map(place=>({...place,...PLACE_FIGMA_OVERRIDES[place.id]})).concat(PLACE_FIGMA_ADDITIONS);
+
+export const placeRecords = placeSeeds.map(createPlace);
+export const placeValidation = validatePlaces(placeRecords);
+export const places = placeRecords.map((place,index)=>toPrototypePlace(place,{distance:placeSeeds[index].distance}));

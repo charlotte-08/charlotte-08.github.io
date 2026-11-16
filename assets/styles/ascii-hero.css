@@ -1,0 +1,18 @@
+ascii-hero-animation {
+  position: absolute;
+  inset: 0;
+  display: block;
+  overflow: hidden;
+  color: var(--color-foreground-base-primary);
+  background: var(--color-background-base-primary);
+}
+
+.ascii-hero {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ascii-hero { animation: none; }
+}

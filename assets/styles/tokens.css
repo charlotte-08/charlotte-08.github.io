@@ -124,7 +124,7 @@
   --color-foreground-interactive-default: var(--color-mint-700);
   --color-foreground-interactive-hover: var(--color-mint-500);
   --color-foreground-interactive-focus: var(--color-mint-500);
-  --color-foreground-interactive-press: var(--color-mint-500);
+  --color-foreground-interactive-press: var(--color-mint-600);
   --color-foreground-system-success: var(--color-green-700);
   --color-foreground-system-warning: var(--color-orange-600);
   --color-foreground-system-negative: var(--color-red-600);
@@ -148,7 +148,7 @@
   --color-background-system-negative: var(--color-red-100);
   --color-background-system-disabled: var(--color-neutral-200);
   --color-border-base-primary: var(--color-neutral-100);
-  --color-border-base-devider: var(--color-neutral-200);
+  --color-border-base-divider: var(--color-neutral-300);
   --color-border-interactive-default: var(--color-mint-500);
   --color-border-system-success: var(--color-green-500);
   --color-border-system-warning: var(--color-orange-500);
@@ -186,8 +186,14 @@
   --type-label-l-line-height: 26px;
   --type-label-s-font-size: 14px;
   --type-label-s-line-height: 20px;
-  --type-caption-font-size: 12px;
-  --type-caption-line-height: 18px;
+  --type-caption-font-size: 13px;
+  --type-caption-line-height: 20px;
+
+  /* S03 Home Hero — Mobile typography */
+  --type-hero-home-font-size: 72px;
+  --type-hero-home-line-height: 1.2;
+  --type-hero-home-font-weight: 700;
+  --type-hero-home-letter-spacing: 0.04em;
 }
 
 :root, [data-font-theme="sans"] {
@@ -211,15 +217,15 @@
   --type-heading-s-letter-spacing-zh: 2%;
   --type-heading-s-letter-spacing-en: 0%;
   --type-body-l-font-weight-zh: 500;
-  --type-body-l-font-weight-en: 500;
+  --type-body-l-font-weight-en: 400;
   --type-body-l-letter-spacing-zh: 2%;
   --type-body-l-letter-spacing-en: 0%;
   --type-body-m-font-weight-zh: 500;
-  --type-body-m-font-weight-en: 500;
+  --type-body-m-font-weight-en: 400;
   --type-body-m-letter-spacing-zh: 2%;
   --type-body-m-letter-spacing-en: 0%;
   --type-body-s-font-weight-zh: 500;
-  --type-body-s-font-weight-en: 500;
+  --type-body-s-font-weight-en: 400;
   --type-body-s-letter-spacing-zh: 2%;
   --type-body-s-letter-spacing-en: 0%;
   --type-label-l-font-weight-zh: 500;
@@ -326,14 +332,18 @@
     --type-label-l-line-height: 31px;
     --type-label-s-font-size: 16px;
     --type-label-s-line-height: 22px;
-    --type-caption-font-size: 12px;
-    --type-caption-line-height: 18px;
+    --type-caption-font-size: 14px;
+    --type-caption-line-height: 21px;
+
+    /* S03 Home Hero — Tablet typography */
+    --type-hero-home-font-size: 140px;
   }
 }
 
 @media (min-width: 1200px) {
   :root {
     --layout-inline-margin: 80px;
+    --type-hero-home-font-size: 200px;
   }
 }
 
@@ -343,5 +353,4 @@
     --layout-content-max: 1440px;
   }
 }
-
 

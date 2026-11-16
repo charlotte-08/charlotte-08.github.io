@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="zh-Hant" data-font-theme="sans">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Charlotte's Playground 首屏 ASCII 動畫實驗">
+  <title>Charlotte’s Playground — Hero Experiment</title>
+  <link rel="stylesheet" href="./assets/styles/design-system.css">
+  <link rel="stylesheet" href="./assets/styles/hero-experiment.css">
+  <script src="./assets/scripts/icon-library.js" defer></script>
+  <script src="./assets/scripts/site-header.js" defer></script>
+</head>
+<body>
+  <site-header></site-header>
+
+  <main class="hero-stage">
+    <h1 class="hero-title type-en" aria-label="Charlotte’s Playground">
+      <span>Charlotte’s</span>
+      <span>Playground</span>
+    </h1>
+
+    <section class="ascii-window" aria-labelledby="scene-title">
+      <div class="window-meta type-caption type-en">
+        <span>CHARLOTTE.LOG</span>
+        <span id="scene-count">01 / 05</span>
+      </div>
+
+      <div class="ascii-stage">
+        <pre id="ascii-art" aria-hidden="true"></pre>
+      </div>
+
+      <div class="scene-caption">
+        <p class="type-caption type-en" id="scene-kicker">CURRENTLY</p>
+        <h2 class="type-heading-s type-en" id="scene-title">At the computer</h2>
+        <p class="type-body-s type-tc" id="scene-description">把混亂的東西整理成另一種混亂。</p>
+      </div>
+
+      <div class="scene-progress" aria-label="動畫情境進度">
+        <button class="is-active" type="button" aria-label="在電腦前" data-scene="0"></button>
+        <button type="button" aria-label="和大家討論" data-scene="1"></button>
+        <button type="button" aria-label="Presentation" data-scene="2"></button>
+        <button type="button" aria-label="做飯" data-scene="3"></button>
+        <button type="button" aria-label="旅行" data-scene="4"></button>
+      </div>
+    </section>
+
+    <div class="hero-note type-caption type-tc">
+      <span>設計／研究／料理／旅行</span>
+      <span>Scroll to enter ↓</span>
+    </div>
+  </main>
+
+  <script src="./assets/scripts/hero-ascii.js"></script>
+</body>
+</html>

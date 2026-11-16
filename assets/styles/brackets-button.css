@@ -1,0 +1,121 @@
+brackets-button { display: inline-block; }
+
+/* The Figma component hugs its label; the production label is wider than the
+   library's placeholder text, so its measured instance is 115 / 150 px. */
+brackets-button[label="Works"] .brackets-button { min-width: 115px; }
+
+.brackets-button {
+  width: max-content;
+  height: 36px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 2px 4px;
+  border: 0;
+  color: var(--color-foreground-base-secondary);
+  text-decoration: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.brackets-button__content {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  white-space: nowrap;
+}
+
+.brackets-button__bracket {
+  font-family: var(--font-family-en);
+  font-size: var(--type-body-l-font-size);
+  font-weight: var(--type-body-l-font-weight-en);
+  line-height: var(--type-body-l-line-height);
+  letter-spacing: var(--type-body-l-letter-spacing-en);
+}
+
+.brackets-button__label {
+  font-family: var(--font-family-en);
+  font-size: var(--type-label-l-font-size);
+  font-weight: var(--type-label-l-font-weight-en);
+  line-height: var(--type-label-l-line-height);
+  letter-spacing: var(--type-label-l-letter-spacing-en);
+}
+
+.brackets-button__icon {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  flex: 0 0 24px;
+}
+
+.brackets-button__icon img {
+  position: absolute;
+  inset: 0;
+  display: none;
+}
+
+.brackets-button__icon .is-default.is-mobile { display: block; }
+
+.brackets-button__underline {
+  position: relative;
+  width: 100%;
+  height: 1px;
+}
+
+.brackets-button__underline img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 1px;
+  display: none;
+}
+
+.brackets-button:hover,
+.brackets-button:focus-visible { color: var(--color-foreground-interactive-hover); }
+.brackets-button:hover .is-default,
+.brackets-button:focus-visible .is-default { display: none; }
+.brackets-button:hover .is-hover.is-mobile,
+.brackets-button:focus-visible .is-hover.is-mobile,
+.brackets-button:hover .brackets-button__underline .is-hover.is-mobile,
+.brackets-button:focus-visible .brackets-button__underline .is-hover.is-mobile { display: block; }
+
+.brackets-button:focus-visible {
+  outline: 2px solid var(--color-border-interactive-focus);
+  outline-offset: 2px;
+}
+
+.brackets-button:active { color: var(--color-foreground-interactive-press); }
+.brackets-button:active .is-default,
+.brackets-button:active .is-hover { display: none; }
+.brackets-button:active .is-pressed.is-mobile,
+.brackets-button:active .brackets-button__underline .is-pressed.is-mobile { display: block; }
+
+@media (min-width: 768px) {
+  brackets-button[label="Works"] .brackets-button { min-width: 150px; }
+
+  .brackets-button {
+    height: 46px;
+    padding: 4px 8px;
+  }
+
+  .brackets-button__content { gap: 4px; }
+  .brackets-button__icon { width: 32px; height: 32px; flex-basis: 32px; }
+  .brackets-button__icon .is-default.is-mobile { display: none; }
+  .brackets-button__icon .is-default.is-desktop { display: block; }
+
+  .brackets-button:hover .is-hover.is-mobile,
+  .brackets-button:focus-visible .is-hover.is-mobile,
+  .brackets-button:hover .brackets-button__underline .is-hover.is-mobile,
+  .brackets-button:focus-visible .brackets-button__underline .is-hover.is-mobile,
+  .brackets-button:active .is-pressed.is-mobile,
+  .brackets-button:active .brackets-button__underline .is-pressed.is-mobile { display: none; }
+
+  .brackets-button:hover .is-hover.is-desktop,
+  .brackets-button:focus-visible .is-hover.is-desktop,
+  .brackets-button:hover .brackets-button__underline .is-hover.is-desktop,
+  .brackets-button:focus-visible .brackets-button__underline .is-hover.is-desktop { display: block; }
+
+  .brackets-button:active .is-pressed.is-desktop,
+  .brackets-button:active .brackets-button__underline .is-pressed.is-desktop { display: block; }
+}

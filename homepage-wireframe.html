@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="zh-Hant" data-font-theme="sans">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Charlotte 個人網站首頁資訊架構 Wireframe">
+  <title>Charlotte — Homepage Wireframe</title>
+  <link rel="stylesheet" href="./assets/styles/design-system.css">
+  <link rel="stylesheet" href="./assets/styles/home-wireframe.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">跳到主要內容</a>
+
+  <header class="site-header">
+    <div class="site-container header-inner">
+      <a class="brand type-heading-s type-en" href="#top" aria-label="Charlotte 首頁">Charlotte</a>
+      <nav class="desktop-nav type-label-s type-en" aria-label="主要導覽">
+        <a href="#works">Works</a>
+        <a href="#food">Food</a>
+        <a href="#travel">Travel</a>
+        <a href="#about">About</a>
+      </nav>
+      <details class="mobile-menu">
+        <summary class="type-label-s type-tc">選單</summary>
+        <nav aria-label="行動版主要導覽">
+          <a href="#works">Works</a>
+          <a href="#food">Food</a>
+          <a href="#travel">Travel</a>
+          <a href="#about">About</a>
+        </nav>
+      </details>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="hero site-container" id="top" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow type-label-s type-en">Designer · Researcher · Everyday Observer</p>
+        <h1 class="type-display type-tc" id="hero-title">嗨，我是 Charlotte。<br>這裡收著我的工作與生活。</h1>
+        <p class="hero-intro type-body-l type-tc">從設計作品、研究過程，到做菜與乞丐式旅行；有精力整理的事情，我都會慢慢放上來。</p>
+        <div class="hero-actions">
+          <a class="button button-primary type-label-s type-tc" href="#featured">看看最近在做什麼</a>
+          <a class="button button-secondary type-label-s type-tc" href="#browse">依主題瀏覽</a>
+        </div>
+      </div>
+      <div class="wire-media hero-media" role="img" aria-label="個人形象或代表性拼貼圖片預留位置">
+        <span>Hero image / collage</span>
+      </div>
+    </section>
+
+    <section class="section site-container" id="featured" aria-labelledby="featured-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow type-label-s type-en">Featured</p>
+          <h2 class="type-heading-l type-tc" id="featured-title">現在最想讓你看到的</h2>
+        </div>
+        <a class="text-link type-label-s type-tc" href="#recent">查看全部內容 →</a>
+      </div>
+
+      <article class="feature-card" id="works">
+        <div class="wire-media feature-media" role="img" aria-label="ROAMEE 專案封面圖片預留位置">
+          <span>Featured project cover</span>
+        </div>
+        <div class="feature-copy">
+          <p class="eyebrow type-label-s type-en">UX / Product Design</p>
+          <h3 class="type-heading-m type-en">ROAMEE</h3>
+          <p class="type-body-m type-tc">一個幫助人們擺脫選擇疲勞、即興探索周遭與共同規劃行程的旅行體驗。</p>
+          <ul class="meta-list type-caption type-tc" aria-label="專案資訊">
+            <li>角色：UX／UI 設計</li>
+            <li>類型：碩士新生展作品</li>
+            <li>狀態：持續整理中</li>
+          </ul>
+          <a class="button button-primary type-label-s type-tc" href="./works/roamee/">查看完整作品</a>
+        </div>
+      </article>
+    </section>
+
+    <section class="section section-tinted" id="browse" aria-labelledby="browse-title">
+      <div class="site-container">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow type-label-s type-en">Browse by interest</p>
+            <h2 class="type-heading-l type-tc" id="browse-title">你今天想看哪一種 Charlotte？</h2>
+          </div>
+        </div>
+
+        <div class="topic-grid">
+          <a class="topic-card" href="#works">
+            <span class="topic-index type-caption type-en">01</span>
+            <div class="wire-media topic-media"><span>Works image</span></div>
+            <h3 class="type-heading-s type-en">Works</h3>
+            <p class="type-body-s type-tc">產品設計、研究、展覽與尚未放棄的各種嘗試。</p>
+            <span class="card-link type-label-s type-tc">看作品 →</span>
+          </a>
+
+          <a class="topic-card" href="#food" id="food">
+            <span class="topic-index type-caption type-en">02</span>
+            <div class="wire-media topic-media"><span>Food image</span></div>
+            <h3 class="type-heading-s type-en">Food</h3>
+            <p class="type-body-s type-tc">做菜紀錄、食譜實驗，以及失敗後還是有吃掉的東西。</p>
+            <span class="card-link type-label-s type-tc">看做菜 →</span>
+          </a>
+
+          <a class="topic-card" href="#travel" id="travel">
+            <span class="topic-index type-caption type-en">03</span>
+            <div class="wire-media topic-media"><span>Travel image</span></div>
+            <h3 class="type-heading-s type-en">Budget Travel</h3>
+            <p class="type-body-s type-tc">預算有限但好奇心很多的旅行方式、路線與生存心得。</p>
+            <span class="card-link type-label-s type-tc">看旅行 →</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section site-container" id="recent" aria-labelledby="recent-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow type-label-s type-en">Recently shared</p>
+          <h2 class="type-heading-l type-tc" id="recent-title">最近分享</h2>
+        </div>
+      </div>
+
+      <div class="recent-list">
+        <article class="recent-item">
+          <div class="wire-media recent-media"><span>Thumbnail</span></div>
+          <div class="recent-copy">
+            <div class="item-meta type-caption type-tc"><span>作品</span><time datetime="2026">2026</time></div>
+            <h3 class="type-heading-s type-tc"><a href="./works/roamee/">ROAMEE：把不知道去哪裡，變成一場即興探索</a></h3>
+            <p class="type-body-s type-tc">從研究、設計系統到可操作 Prototype 的完整紀錄。</p>
+          </div>
+        </article>
+
+        <article class="recent-item is-placeholder">
+          <div class="wire-media recent-media"><span>Thumbnail</span></div>
+          <div class="recent-copy">
+            <div class="item-meta type-caption type-tc"><span>做菜</span><span>即將整理</span></div>
+            <h3 class="type-heading-s type-tc">料理文章標題預留位置</h3>
+            <p class="type-body-s type-tc">未來文章摘要與閱讀入口的位置。</p>
+          </div>
+        </article>
+
+        <article class="recent-item is-placeholder">
+          <div class="wire-media recent-media"><span>Thumbnail</span></div>
+          <div class="recent-copy">
+            <div class="item-meta type-caption type-tc"><span>旅行</span><span>即將整理</span></div>
+            <h3 class="type-heading-s type-tc">乞丐式旅行文章標題預留位置</h3>
+            <p class="type-body-s type-tc">未來文章摘要與閱讀入口的位置。</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section about-section" id="about" aria-labelledby="about-title">
+      <div class="site-container about-grid">
+        <div class="wire-media portrait-media" role="img" aria-label="Charlotte 個人照片預留位置"><span>Portrait</span></div>
+        <div class="about-copy">
+          <p class="eyebrow type-label-s type-en">About Charlotte</p>
+          <h2 class="type-heading-l type-tc" id="about-title">設計是工作，觀察與分享大概是生活習慣。</h2>
+          <p class="type-body-m type-tc">這裡不是一座只放完成品的展示櫃。我也想留下過程、岔路、日常嗜好，以及那些還不知道最後會變成什麼的東西。</p>
+          <a class="text-link type-label-s type-tc" href="mailto:dana97095@gmail.com">dana97095@gmail.com →</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-container footer-inner">
+      <p class="type-caption type-en">© 2026 Charlotte</p>
+      <a class="type-caption type-en" href="#top">Back to top ↑</a>
+    </div>
+  </footer>
+</body>
+</html>
